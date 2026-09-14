@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "minimumVersion": "0",
+  "maintenance": {
+    "on": false,
+    "message": ""
+  },
+  "killSwitches": {},
+  "flags": {},
+  "updatedAt": "2026-09-13T06:40:06.622Z"
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok authorisation · Jarvis</title>
+<style>body{font:16px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem;color:#222}code{display:block;padding:.8rem;background:#f4f4f4;border-radius:6px;word-break:break-all;font-size:1rem}p.small{color:#666;font-size:.9rem}</style>
+</head>
+<body>
+<h1>TikTok authorisation</h1>
+<p>TikTok sent you here after you approved Jarvis. Nothing on this page talks to a server; it only shows the one-time code TikTok put in the address bar so you can paste it into the TikTok card on the Connections page of your local Jarvis.</p>
+<p>Your code:</p>
+<code id="code">no code in the address bar</code>
+<p class="small">The code expires in minutes and can be used once. If it has expired, press Connect on the card again.</p>
+<script>
+  var q = new URLSearchParams(location.search);
+  var c = q.get("code");
+  if (c) document.getElementById("code").textContent = c;
+  else if (q.get("error")) document.getElementById("code").textContent = "TikTok refused: " + (q.get("error_description") || q.get("error"));
+</script>
+</body>
+</html>
